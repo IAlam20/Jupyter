@@ -21,8 +21,9 @@ import pandas as pd
 
 df = pd.read_sql_query ('''
 
-select *
-from program
+select top 10 *
+from PROGRAM
+where program_name like '%austin%'
 
 '''
 , conn)
